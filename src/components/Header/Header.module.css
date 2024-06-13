@@ -22,15 +22,16 @@
   text-decoration: none;
   color: var(--white);
   margin-right: 1.5rem; /* 24px */
-  font-size: 1.125; /* 18px */
+  font-size: 1.125rem; /* 18px */
   transition: all 0.3s ease;
 }
+
 .header a:hover {
   color: var(--red);
   transform: scale(1.1);
 }
 
-/* menu sandwich*/
+/* menu sandwich */
 @media (max-width: 768px) {
   .menuButton {
     width: 30px;
@@ -50,36 +51,34 @@
     height: 2px;
     background-color: var(--white);
   }
+
   .menuSandwich {
     width: 50%;
     height: auto;
     position: absolute;
     top: 50px;
-    right: -100%; /* Inicialmente fora da tela */
+    right: 0;
     background-color: var(--primary);
     flex-direction: column;
     padding: 20px;
     gap: 1rem;
-    transition: transform 0.3s ease;
-    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   }
-  .show {
+
+  .menuSandwich.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
     display: flex;
-    width: 50%;
-    height: auto;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: var(--primary);
     flex-direction: column;
-    padding: 20px;
-    gap: 1rem;
-    transform: translate(0);
-    right: 0;
   }
 }
+
 @media (max-width: 480px) {
-  .show {
+  .menuSandwich {
     width: 100%;
   }
 }
