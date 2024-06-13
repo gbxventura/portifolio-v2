@@ -1,13 +1,18 @@
 .header {
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: var(--primary);
   color: var(--white);
 
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  top: 0;
+
+  box-shadow: 5px 5px 10px #00000021;
 }
+
 .header span {
   font-size: 1.5rem; /* 24px -> 16px = 1rem */
   font-weight: bold;
