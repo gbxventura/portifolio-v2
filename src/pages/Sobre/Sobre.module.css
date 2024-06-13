@@ -1,3 +1,4 @@
+/* CSS da página Sobre */
 .sobre {
   width: 100%;
   min-height: 85vh;
@@ -5,52 +6,113 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
+
 .bio {
   display: flex;
   align-items: center;
   gap: 3rem;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
+
 .bio span {
   color: var(--red);
   font-weight: bold;
 }
+
 .bio strong {
   color: var(--secondary);
   font-weight: bold;
 }
 
-.textos h2,
-p {
+.textos {
+  text-align: center;
   margin-bottom: 1rem;
 }
+
+.textos h2,
+.textos p {
+  margin-bottom: 1rem;
+}
+
 .techs {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
 }
+
 .icones {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
+
 .icones img {
   height: 50px;
   transition: transform 0.3s ease;
+  margin: 0.5rem;
 }
+
 .icones img:hover {
   transform: scale(1.2);
 }
+
 .avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   transition: transform 0.4s ease;
 }
+
 .avatar:hover {
   transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bio {
+    gap: 1.5rem;
+  }
+
+  .techs {
+    width: 90%;
+  }
+
+  .icones img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre {
+    padding-block: 2.5rem;
+  }
+  .bio {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .techs {
+    width: 100%;
+  }
+
+  .icones img {
+    height: 35px;
+  }
+
+  .textos {
+    padding: 0 1rem;
+  }
 }

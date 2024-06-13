@@ -1,3 +1,14 @@
+/* CSS da página 404 */
+.page404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
 .titulo2 {
   padding-top: 2rem;
 }
@@ -8,12 +19,54 @@
   justify-content: center;
   flex-direction: column;
 }
-.texto_grande,
-.texto_vermelho {
+
+.texto_grande {
   font-size: 300px;
   color: var(--red);
   font-weight: bold;
 }
+
 .texto_vermelho {
   font-size: 1.5rem;
+  color: var(--red);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .page404 {
+    padding: 1.5rem;
+  }
+
+  .texto_grande {
+    font-size: 150px;
+  }
+
+  .texto_vermelho {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page404 {
+    padding: 1rem;
+    height: auto; /* Ajustar a altura para auto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Garantir que o conteúdo esteja centralizado */
+  }
+
+  .titulo2 {
+    padding-top: 1rem; /* Ajuste de padding para telas menores */
+  }
+
+  .texto_grande {
+    font-size: 100px;
+  }
+
+  .texto_vermelho {
+    font-size: 0.875rem; /* Tamanho menor para texto vermelho */
+    text-align: center;
+    margin: 0.5rem 0;
+  }
 }

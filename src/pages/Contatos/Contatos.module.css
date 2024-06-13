@@ -22,3 +22,9 @@
 .icone:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 480px) {
+  .contatos {
+    padding-inline: 1.5rem;
+  }
+}
