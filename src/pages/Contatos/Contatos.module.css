@@ -23,7 +23,16 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 768) {
+  .contatos {
+    padding-inline: 20px;
+  }
+}
+
 @media (max-width: 480px) {
+  .icones {
+    gap: 0.5rem;
+  }
   .contatos {
     padding-inline: 1.5rem;
   }

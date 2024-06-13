@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  padding-block: 40px;
 }
 
 .bio {
@@ -16,6 +17,7 @@
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center; /* Centraliza os elementos no contêiner */
 }
 
 .bio span {
@@ -76,9 +78,27 @@
 }
 
 /* Responsividade */
+@media (max-width: 925px) {
+  .bio {
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .avatar {
+    margin: auto;
+  }
+}
+
 @media (max-width: 768px) {
+  .sobre {
+    padding-block: 2.5rem;
+  }
+
   .bio {
     gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
   }
 
   .techs {
@@ -88,12 +108,17 @@
   .icones img {
     height: 40px;
   }
+
+  .avatar {
+    margin: auto;
+  }
 }
 
 @media (max-width: 480px) {
   .sobre {
     padding-block: 2.5rem;
   }
+
   .bio {
     flex-direction: column;
     gap: 1rem;
