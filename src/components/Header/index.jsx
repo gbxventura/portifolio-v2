@@ -8,8 +8,6 @@ function Header() {
         setShowMenu(!showMenu)
     }
 
-
-
     return (
         <header className={styles.header}>
             <Link to='/'>
@@ -17,6 +15,7 @@ function Header() {
             </Link>
             <nav
                 className={`${styles.menuSandwich} ${showMenu ? styles.show : ''}`}
+                onClick={togleMenu}
             >
                 <Link to='/'>Home</Link>
                 <Link to='/sobre'>Sobre</Link>
